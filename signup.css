@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+ }
+ /* background warna utama dan yang classnya form content */
+ .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(girl.jpg);
+    background-size: cover;
+    background-position: center;
+    /*background: linear-gradient(135deg, #16222A, #3A6073);*/
+    /*background-color: royalblue;*/
+    column-gap: 30px;
+ }
+/* form untuk menambahkan border putih untuk di dalamnya ada login email dll */
+.form {
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background: transparent;
+    /*background: #fff;*/
+    backdrop-filter: blur(50px);
+    box-shadow: 0px, 6px, 20px rgba(0, 0, 0, 0.4);
+}
+.form.signup {
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+/* header untuk bacaan login di gedein dan di tengahin */
+header {
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+/* form ini untuk menambah luas kotak putihnya */
+form {
+    margin-top: 30px;
+}
+/* form field ini untuk mengasih jarak bar email dan passwordnya*/
+.form .field {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+}
+/* field ini untuk memperbesar dan mengilangin border yang di dalam email dan passwordnya */
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+/* form ini untuk memperkeil border email dan password dan juga dikasih jarak */
+.field input {
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid #CACACA;
+}
+/* untuk memfokus pencetan text dalam bar */
+.field input:focus {
+    border-bottom-width: 2px;
+}
+/* namabahin mata utk password */
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+/* form link ini untuk tulisaan forgot passwordnya di tengahin dan ke atasan dikit */
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+/* untuk mengganti warna login dan bar dan ketika bisa di pencet loginnya*/
+.field button {
+    color: #fff;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    /*background-color: #0171d3;*/
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+/* untuk mengganti warna login bar */
+.field button {
+    background-color: #0171d3;
+}
+.form-link span,
+/* already have account di keciliin dan di warnain*/
+.form-link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+/* ngilangin garis panjang di bawah text dan warnain text forgot password dan signup */
+.form a {
+    color: #0171d3;
+    text-decoration: none;
+}
+/* nambhain garis panjang di bawah text "ketika cursor mouse di arahin ke textnya */
+.form-content a:hover {
+    text-decoration: underline;
+}
+/* mempebesar box putih*/
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+/* namabahin kata or dan ketengahin sama garis */
+.line::before {
+    content: 'or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #232836;
+    padding: 0 15px;
+}
+.media-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.facebook {
+    color: #fff;
+    background-color: #4267b2;
+}
+a.google{
+    background-color: #DB4437;
+    /*border: 1px solid #CACACA;*/
+    /*opacity: 0.6;*/
+    color: #fff;
+}
